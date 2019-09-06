@@ -16,6 +16,8 @@ module.exports = function(api) {
         extensions: ['.css']
       }
     ])
+  } else {
+    plugins.push('babel-plugin-jsx-remove-data-test-id')
   }
 
   return {

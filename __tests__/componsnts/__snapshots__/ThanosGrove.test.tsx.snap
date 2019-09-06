@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThanosGrove [sanpshot] after decimation 1`] = `
+<div>
+  <div
+    class="components_container_2LW-B"
+    data-testid="grove"
+  >
+    <img
+      alt="thanos grove"
+      class="components_img_XSm6T"
+      height="80px"
+      src="https://www.google.com/logos/fnbx/thanos/thanos_idle.png"
+      width="80px"
+    />
+    <div
+      class="components_screen_Z0KZo"
+    >
+      <div
+        class="components_film_SXq_f"
+        style="width: 3480px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_time.png); transform: translateX(0);"
+      />
+      <audio
+        controls=""
+        hidden=""
+      >
+        <source
+          src="https://www.google.com/logos/fnbx/thanos/thanos_reverse_sound.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ThanosGrove [sanpshot] before decimation 1`] = `
+<div>
+  <div
+    class="components_container_2LW-B"
+    data-testid="grove"
+  >
+    <img
+      alt="thanos grove"
+      class="components_img_XSm6T"
+      height="80px"
+      src="https://www.google.com/logos/fnbx/thanos/thanos_idle.png"
+      width="80px"
+    />
+    <div
+      class="components_screen_Z0KZo"
+    >
+      <div
+        class="components_film_SXq_f"
+        style="width: 3480px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_snap.png);"
+      />
+      <audio
+        controls=""
+        hidden=""
+      >
+        <source
+          src="https://www.google.com/logos/fnbx/thanos/thanos_snap_sound.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+  </div>
+</div>
+`;
