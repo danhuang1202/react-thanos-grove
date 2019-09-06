@@ -1,3 +1,7 @@
+## 1.1.0 (2019-09-06)
+
+* feat: doc update ([2a9fa51](https://github.com/danhuang1202/react-thanos-grove/commit/2a9fa51))
+
 ## 1.0.0 (2019-09-06)
 
 * fix: remove unused code and add test id ([f2ac2fd](https://github.com/danhuang1202/react-thanos-grove/commit/f2ac2fd))
