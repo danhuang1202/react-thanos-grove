@@ -40,9 +40,8 @@ const ThanosGrove: FunctionComponent<Props> = ({
   const clickHandler = () => {
     const target = filmEl.current
     let startTime = null
-    console.log('clickHandler', filmEl)
+
     const updateFrame = timestamp => {
-      console.log('updateFrame', filmEl)
       if (!startTime) startTime = timestamp
 
       const frameIndex = Math.min(
@@ -82,7 +81,11 @@ const ThanosGrove: FunctionComponent<Props> = ({
   }
 
   return (
-    <div className={cns(style.container, className)}>
+    <div
+      data-testid="grove"
+      className={cns(style.container, className)}
+      onClick={clickHandler}
+    >
       <img
         alt="thanos grove"
         width="80px"
@@ -91,7 +94,7 @@ const ThanosGrove: FunctionComponent<Props> = ({
         className={style.img}
         hidden={isSnaping}
       />
-      <div className={style.screen} onClick={clickHandler}>
+      <div className={style.screen}>
         <div ref={filmEl} className={style.film} style={filmStyle} />
         <audio controls ref={audioEl} className={style.audio} hidden>
           <source src={audioSource} type="audio/mpeg" />
