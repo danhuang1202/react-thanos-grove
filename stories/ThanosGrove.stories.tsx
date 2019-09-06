@@ -15,5 +15,8 @@ storiesOf('Components', module)
     })
   )
   .add('ThanosGrove', () => (
-    <ThanosGrove className={text('className', style.wrap)} />
+    <div className={style.wrap}>
+      <ThanosGrove className={text('className', style.grove)} />
+      <span className={style.tip}>Click the Grove</span>
+    </div>
   ))

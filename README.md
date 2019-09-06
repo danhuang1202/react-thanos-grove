@@ -6,9 +6,9 @@
 
 ![](https://www.google.com/logos/fnbx/thanos/thanos_idle.png)
 
-Make [Google Thanos Easter Egg](https://www.google.com/search?q=thanos) as react component.
+Make the naping animation in [Google Thanos Easter Egg](https://www.google.com/search?q=thanos) as react component.
 
-Please refer example <a href="https://danhuang1202.github.io/react-thanos-grove/">here</a> for more information.
+Please refer the example <a href="https://danhuang1202.github.io/react-thanos-grove/">here</a> for more information.
 
 ## Installation
 ```
@@ -18,7 +18,7 @@ npm i react-thanos-grove
 ## Components
 - ThanosGrove
 
-  Thanos snap animation 
+  Snap animation by thanos's grove
 
   | props | type | required | default | description |
   | --- | --- | --- | --- | --- |
