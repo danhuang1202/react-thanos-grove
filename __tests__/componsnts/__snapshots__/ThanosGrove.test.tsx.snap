@@ -3,21 +3,21 @@
 exports[`ThanosGrove [sanpshot] after decimation 1`] = `
 <div>
   <div
-    class="components_container_2LW-B"
+    class="ThanosGrove_container_1ummv"
     data-testid="grove"
   >
     <img
       alt="thanos grove"
-      class="components_img_XSm6T"
+      class="ThanosGrove_img_2AS2q"
       height="80px"
       src="https://www.google.com/logos/fnbx/thanos/thanos_idle.png"
       width="80px"
     />
     <div
-      class="components_screen_Z0KZo"
+      class="ThanosGrove_screen_32q9N"
     >
       <div
-        class="components_film_SXq_f"
+        class="ThanosGrove_film_2lKBj"
         style="width: 3480px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_time.png); transform: translateX(0);"
       />
       <audio
@@ -37,21 +37,21 @@ exports[`ThanosGrove [sanpshot] after decimation 1`] = `
 exports[`ThanosGrove [sanpshot] before decimation 1`] = `
 <div>
   <div
-    class="components_container_2LW-B"
+    class="ThanosGrove_container_1ummv"
     data-testid="grove"
   >
     <img
       alt="thanos grove"
-      class="components_img_XSm6T"
+      class="ThanosGrove_img_2AS2q"
       height="80px"
       src="https://www.google.com/logos/fnbx/thanos/thanos_idle.png"
       width="80px"
     />
     <div
-      class="components_screen_Z0KZo"
+      class="ThanosGrove_screen_32q9N"
     >
       <div
-        class="components_film_SXq_f"
+        class="ThanosGrove_film_2lKBj"
         style="width: 3480px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_snap.png);"
       />
       <audio

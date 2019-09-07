@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useState, createRef } from 'react'
 import cns from 'classnames'
 // @ts-ignore
-import style from './ThanosGrove.css'
+import style from './style.css'
 
 type Props = {
   /** Custom class name */
