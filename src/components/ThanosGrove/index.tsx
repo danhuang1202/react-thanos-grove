@@ -1,5 +1,6 @@
-import React, { FunctionComponent, useState, createRef } from 'react'
+import React, { FunctionComponent, useState, useRef } from 'react'
 import cns from 'classnames'
+import useRequestAnimationFrame from '../hooks/useRequestAnimationFrame'
 // @ts-ignore
 import style from './style.css'
 
@@ -12,8 +13,8 @@ type Props = {
   onReverse?: () => void
 }
 
-const FOOTAGE = 3480
-const FILE_FRAME_TIME = 60
+const FOOTAGE = 3840
+const FILE_FRAME_TIME = 32
 const FILE_FRAME_WIDTH = 80
 const FILE_FRAME_COUNT = FOOTAGE / FILE_FRAME_WIDTH
 const IMAGE_THANOS_IDLE =
@@ -34,42 +35,47 @@ const ThanosGrove: FunctionComponent<Props> = ({
 }) => {
   const [decimation, setDecimation] = useState(false)
   const [isSnaping, setIsSnaping] = useState(false)
-  const filmEl = createRef<HTMLDivElement>()
-  const audioEl = createRef<HTMLAudioElement>()
+  const filmEl = useRef<HTMLDivElement>()
+  const audioEl = useRef<HTMLAudioElement>()
+  const duration = FILE_FRAME_TIME * FILE_FRAME_COUNT
+  const callback = elapsedTime => {
+    const frameIndex = Math.min(
+      Math.floor(elapsedTime / FILE_FRAME_TIME),
+      FILE_FRAME_COUNT
+    )
+    const translateX = `-${frameIndex * FILE_FRAME_WIDTH}px`
+    filmEl.current.style.transform = `translateX(${translateX})`
+
+    if (elapsedTime >= duration) {
+      if (decimation) {
+        onReverse && onReverse()
+      } else {
+        onDecimation && onDecimation()
+      }
+
+      setIsSnaping(false)
+      setDecimation(!decimation)
+    }
+  }
+
+  const { isActive, start } = useRequestAnimationFrame({
+    disable: true,
+    duration,
+    callback
+  })
 
   const clickHandler = () => {
-    const target = filmEl.current
-    let startTime = null
-
-    const updateFrame = timestamp => {
-      if (!startTime) startTime = timestamp
-
-      const frameIndex = Math.min(
-        Math.floor((timestamp - startTime) / FILE_FRAME_TIME),
-        FILE_FRAME_COUNT
-      )
-      const translateX = `-${frameIndex * FILE_FRAME_WIDTH}px`
-      target.style.transform = `translateX(${translateX})`
-
-      if (frameIndex < FILE_FRAME_COUNT) {
-        requestAnimationFrame(updateFrame)
-      } else {
-        if (decimation) {
-          onReverse && onReverse()
-        } else onDecimation && onDecimation()
-
-        target.style.transform = 'translateX(0)'
-        setIsSnaping(false)
-        setDecimation(!decimation)
-      }
+    if (isActive) {
+      return
     }
 
     if (audioEl.current) {
       audioEl.current.load()
       audioEl.current.play()
     }
+    filmEl.current.style.transform = 'translateX(0)'
     setIsSnaping(true)
-    requestAnimationFrame(updateFrame)
+    start()
   }
 
   const audioSource = decimation ? AUDIO_THANOS_REVERSE : AUDIO_THANOS_SNAP
