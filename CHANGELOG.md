@@ -1,3 +1,7 @@
+## 1.3.0 (2019-09-07)
+
+* feat: update snapshot ([0f89149](https://github.com/danhuang1202/react-thanos-grove/commit/0f89149))
+
 ## 1.2.0 (2019-09-06)
 
 * feat: update example ([1b99fc7](https://github.com/danhuang1202/react-thanos-grove/commit/1b99fc7))
