@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState, useRef } from 'react'
 import cns from 'classnames'
-import useRequestAnimationFrame from '../hooks/useRequestAnimationFrame'
+import useRaf from '@dh-react-hooks/use-raf'
 // @ts-ignore
 import style from './style.css'
 
@@ -14,7 +14,7 @@ type Props = {
 }
 
 const FOOTAGE = 3840
-const FILE_FRAME_TIME = 32
+const FILE_FRAME_TIME = 60
 const FILE_FRAME_WIDTH = 80
 const FILE_FRAME_COUNT = FOOTAGE / FILE_FRAME_WIDTH
 const IMAGE_THANOS_IDLE =
@@ -58,7 +58,7 @@ const ThanosGrove: FunctionComponent<Props> = ({
     }
   }
 
-  const { isActive, start } = useRequestAnimationFrame({
+  const { isActive, start } = useRaf({
     disable: true,
     duration,
     callback

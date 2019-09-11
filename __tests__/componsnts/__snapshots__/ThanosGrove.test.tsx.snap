@@ -18,7 +18,7 @@ exports[`ThanosGrove [sanpshot] after decimation 1`] = `
     >
       <div
         class="ThanosGrove_film_2lKBj"
-        style="width: 3480px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_time.png); transform: translateX(0);"
+        style="width: 3840px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_time.png); transform: translateX(-3840px);"
       />
       <audio
         controls=""
@@ -52,7 +52,7 @@ exports[`ThanosGrove [sanpshot] before decimation 1`] = `
     >
       <div
         class="ThanosGrove_film_2lKBj"
-        style="width: 3480px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_snap.png);"
+        style="width: 3840px; background-image: url(https://www.google.com/logos/fnbx/thanos/thanos_snap.png);"
       />
       <audio
         controls=""
