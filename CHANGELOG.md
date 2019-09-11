@@ -1,3 +1,13 @@
+## 1.4.0 (2019-09-11)
+
+* Merge pull request #1 from danhuang1202/hook ([4917117](https://github.com/danhuang1202/react-thanos-grove/commit/4917117)), closes [#1](https://github.com/danhuang1202/react-thanos-grove/issues/1)
+* style: disable click when animation running ([03ba90f](https://github.com/danhuang1202/react-thanos-grove/commit/03ba90f))
+* feat: add useRequestAnimationFrame hook ([585f795](https://github.com/danhuang1202/react-thanos-grove/commit/585f795))
+* feat: import @dh-react-hooks/use-raf ([35e6728](https://github.com/danhuang1202/react-thanos-grove/commit/35e6728))
+* fix: remove unused package ([22455cf](https://github.com/danhuang1202/react-thanos-grove/commit/22455cf))
+* chore: remove react-docgen-typescript-loader ([0098402](https://github.com/danhuang1202/react-thanos-grove/commit/0098402))
+* docs: add description to package.json ([2b995b0](https://github.com/danhuang1202/react-thanos-grove/commit/2b995b0))
+
 ## 1.3.0 (2019-09-07)
 
 * feat: update snapshot ([0f89149](https://github.com/danhuang1202/react-thanos-grove/commit/0f89149))
