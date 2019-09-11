@@ -44,6 +44,7 @@
   "author": "danhuang",
   "license": "ISC",
   "dependencies": {
+    "@dh-react-hooks/use-raf": "^0.6.1",
     "classnames": "^2.2.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
