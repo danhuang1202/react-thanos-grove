@@ -5,6 +5,11 @@
   cursor: pointer;
 }
 
+.disable {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .img {
   object-fit: contain;
 }

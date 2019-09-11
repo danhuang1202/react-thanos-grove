@@ -89,7 +89,7 @@ const ThanosGrove: FunctionComponent<Props> = ({
   return (
     <div
       data-testid="grove"
-      className={cns(style.container, className)}
+      className={cns(style.container, isActive && style.disable, className)}
       onClick={clickHandler}
     >
       <img
